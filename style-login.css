@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2a88e6, #1e4db7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    z-index: 99;
+    animation: slideDown 0.8s ease;
+    color: #2a88e6;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 320px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease;
+    backdrop-filter: blur(5px);
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.login-container:hover {
+    border-image: linear-gradient(45deg, #2a88e6, #00c3ff) 1;
+    border: 3px solid #2a88e6;
+}
+
+.login-container img {
+    width: 80px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.login-container img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #2a88e6;
+    font-weight: 600;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: #f2f2f2;
+    transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+    outline: none;
+    background: #e0e0e0;
+    box-shadow: 0 0 0 2px #2a88e6;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2a88e6, #0052cc);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.login-container button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.5s;
+}
+
+.login-container button:hover::before {
+    left: 100%;
+}
+
+.login-container button:hover {
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZipWeather - Verificação de CEP e Clima</title>
+  <link rel="icon" type="image/png" href="./img/icon.png" />
+
+  <!-- Fontes e ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="login-index.html" class="logo">
+      <img src="./img/icon.png" alt="Logo ZipWeather" />
+    </a>
+    <h1 class="main-title"><i class="fas fa-location-arrow"></i> ZipWeather</h1>
+    <nav class="navbar">
+      <a href="#"><i class="fas fa-home"></i> Início</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> CEP</a>
+      <a href="#"><i class="fas fa-cloud-sun"></i> Clima</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="card fade-in">
+      <h2><i class="fas fa-map-pin"></i> Verificação de CEP</h2>
+      <label for="cep">Digite o seu CEP:</label>
+      <input type="text" id="cep" placeholder="Ex: 12345678" />
+      <button onclick="consultarCEP()"><i class="fas fa-search"></i> Buscar CEP</button>
+      <br>
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
